@@ -3,7 +3,7 @@
           xsi:noNamespaceSchemaLocation="postcards.xsd">
     <card  status="sent" type="congratulatory">
         <thema>Nature</thema>
-        <year>2005</year>
+        <year>2010</year>
         <country>Belarus</country>
         <author>Repin</author>
         <valuable>Historical</valuable>

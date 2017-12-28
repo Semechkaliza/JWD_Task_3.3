@@ -17,13 +17,26 @@
         <xs:sequence>
             <xs:element name="thema" type="xs:string" />
             <xs:element name="year" type="xs:positiveInteger" />
-            <xs:element name="country" type="xs:string"/>
+            <xs:element name="country">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[a-zA-Z]{0,20}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+
+            </xs:element>
             <xs:element name="author" type="xs:string" />
             <xs:element name="valuable" type="xs:string"/>
         </xs:sequence>
         <xs:attribute name="type"
-                   type="xs:string"
-                   use="optional" default="not send" />
-        <xs:attribute name="status" use="required"/>
+                      type="xs:string" use="required"/>
+        <xs:attribute name="status" use="optional" default="not sent">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="sent"/>
+                    <xs:enumeration value="not sent"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
 </xs:schema>

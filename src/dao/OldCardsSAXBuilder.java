@@ -7,8 +7,8 @@ import entity.Card;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
-import services.AbstractOldCardsBuilder;
-import services.CardHandler;
+import service.AbstractOldCardsBuilder;
+import service.CardHandler;
 
 public class OldCardsSAXBuilder extends AbstractOldCardsBuilder {
     private Set<Card> oldCards;
@@ -23,7 +23,8 @@ public class OldCardsSAXBuilder extends AbstractOldCardsBuilder {
         } catch (SAXException e) {
             System.err.print("ошибка SAX парсера: " + e);
         }
-    } public Set<Card> getOldCards() {
+    }
+    public Set<Card> getOldCards() {
         return oldCards;
     }
     public void buildSetOldCards(String fileName) {

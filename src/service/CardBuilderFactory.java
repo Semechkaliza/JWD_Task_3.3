@@ -1,4 +1,4 @@
-package services;
+package service;
 
 import dao.OldCardsDOMBuilder;
 import dao.OldCardsSAXBuilder;
